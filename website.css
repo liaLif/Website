@@ -1,0 +1,489 @@
+body {
+  font-family: Century Gothic, sans-serif;
+  margin: 0;
+  position: relative;
+}
+
+body::before {    
+  content: "";
+  background-image: url("background.jpg");
+  background-color:#dfecf0;
+  background-position: left;
+  background-size: 100%;
+  height: 100%;
+  padding-bottom: 100px;
+  background-repeat: repeat-y;
+  position: absolute;
+  z-index: -2;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.2;
+}
+
+.background::before {
+  content: "";
+  background-color: #ffffff;
+  z-index: -1;
+  height: 100%;
+  padding-bottom: 200px;
+  width: 1400px;
+  margin: auto;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  position: absolute;
+  box-shadow: 0px 0px 20px 20px #ffffff;
+}
+
+/*media background*/
+@media only screen and (max-width: 1020px) {
+  .background::before {
+    width: 100%;
+  }
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(2, 59, 92);
+  width: 100%;
+  margin: 0;
+  z-index: 10;
+}
+
+nav .menu a {
+  float: left;
+  color: #ffffff;
+  text-align: center;
+  padding: 18px 17px;
+  text-decoration: none;
+  font-size: 25px;
+  margin: 0;
+}
+
+nav .menu a:hover {
+  background-color: rgb(236, 213, 187);
+  color: black;
+}
+
+nav .menu a.active {
+  background-color: #be572e;
+  color: white;
+}
+
+/*hamburger menu icon*/
+@media only screen and (max-width: 640px) {
+  #menu-icon {
+    background: url(menu-4-48.png);
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 10px 0px -25px 10px;
+  }
+  .menu {
+    display: none;
+    position: absolute;
+		background: rgb(246 227 212);
+  }
+  nav:hover .menu {
+		display:flex;
+    flex-flow: column;
+    
+	}
+	nav .menu {
+		text-align: center;
+		width: 100%;
+		margin-top: 23px;
+	}
+  nav {
+    position: relative;
+    height: 65px;
+    margin: 0;
+  }
+  nav .menu a:hover {
+    background-color: rgb(2, 59, 92);
+    color: rgb(255, 255, 255);
+  }
+  nav .menu a {
+    color: black;
+    font-weight: bold;
+  }
+  nav .menu a.active {
+    background-color:  rgb(246 227 212);
+    color: rgb(0, 0, 0);
+  }
+  nav .menu a.active:hover {
+    background-color:  rgb(2, 59, 92);
+    color: rgb(255, 255, 255);
+  }
+}
+
+.main-heading h3 {
+  width: 1000px;
+  position:inherit;
+  text-align: center;
+  font-size: 100px;
+  margin: 100px auto;
+  background-color: rgb(52, 113, 148);
+  padding: 70px 0px;
+  color: #ffffff;
+  border-radius: 25px;
+}
+
+.main-heading h3 sub {
+  font-size: 50px;
+}
+
+/*main heading and about responsive*/
+@media only screen and (max-width: 1400px) {
+  .main-heading h3 {
+    width: 100%;
+    position: relative;
+    border-radius: 0;
+    margin: 100px 0px;
+    font-size: 10vw;
+  }
+  .main-heading h3 sub {
+    font-size: 5vw;
+  }
+}
+
+.about p {
+  width: 1000px;
+  position:inherit;
+  font-size: 20px;
+  margin: 100px auto;
+  color: #000;
+  padding-left: 80px;
+}
+
+@media only screen and (max-width: 1400px) {
+  .about p {
+    width: 92%;
+    position: relative;
+    margin: 100px 0px;
+    font-size: 2.5vw;
+    padding: 0 4%;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .about p {
+    width: 92%;
+    position: relative;
+    margin: 100px 0px;
+    font-size: 5vw;
+    padding: 0 4%;
+  }
+}
+
+#room  {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 100px 125px;
+  justify-content: center;
+}
+
+#room img {
+  width: 400px;
+  border-radius: 25px;
+}
+
+#room p {
+  font-size: 16px;
+  color: #000;
+  text-align: center;
+  margin: 5px;
+  margin-top: -50px;
+}
+
+#room .technical p {
+  padding-top: 35px;
+}
+
+#room .interior p {
+  padding-top: 42px;
+}
+
+#room div {
+  margin: 10px;
+  margin-bottom: 20px;
+}
+
+#room .text {
+  margin: 0px;
+}
+
+#room a {
+  text-decoration: none; 
+}
+
+/*urban img hover*/
+.urban:hover img {
+  opacity: 0.5; 
+}
+.urban:hover .middle {
+  opacity: 1;
+}
+.urban img {
+  transition: .5s ease;
+}
+.urban .text {
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+}
+.urban .middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: relative;
+  top: -50%;
+  text-align: center;
+}
+
+/*abstract img hover*/
+.abstract:hover img {
+  opacity: 0.5; 
+}
+.abstract:hover .middle {
+  opacity: 1;
+}
+.abstract img {
+  transition: .5s ease;
+}
+.abstract .text {
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+}
+.abstract .middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: relative;
+  top: -50%;
+  text-align: center;
+}
+
+/*architectural img hover*/
+.architectural:hover img {
+  opacity: 0.5; 
+}
+.architectural:hover .middle {
+  opacity: 1;
+}
+.architectural img {
+  transition: .5s ease;
+}
+.architectural .text {
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+}
+.architectural .middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: relative;
+  top: -50%;
+  text-align: center;
+}
+
+/*technical img hover*/
+.technical:hover img {
+  opacity: 0.5; 
+}
+.technical:hover .middle {
+  opacity: 1;
+}
+.technical img {
+  transition: .5s ease;
+}
+.technical .text {
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+}
+.technical .middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: relative;
+  top: -38%;
+  text-align: center;
+}
+
+/*landscape img hover*/
+.landscape:hover img {
+  opacity: 0.5; 
+}
+.landscape:hover .middle {
+  opacity: 1;
+}
+.landscape img {
+  transition: .5s ease;
+}
+.landscape .text {
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+}
+.landscape .middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: relative;
+  top: -50%;
+  text-align: center;
+}
+
+/*interior img hover*/
+.interior:hover img {
+  opacity: 0.5; 
+}
+.interior:hover .middle {
+  opacity: 1;
+}
+.interior img {
+  transition: .5s ease;
+}
+.interior .text {
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+}
+.interior .middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: relative;
+  top: -36%;
+  text-align: center;
+}
+
+.panel {
+  width: 1000px;
+  color: rgb(0, 0, 0);
+  border-color: #ddd;
+  background-color: rgb(246 227 212);
+  border: 1px solid transparent;
+  border-radius: 25px;
+  box-shadow: 0 0 8px 6px rgba(0,0,0,.05);
+  margin: auto;
+  margin-top: 150px;
+}
+
+/*panel responsive*/
+@media only screen and (max-width: 1020px) {
+  .panel {
+    width: 100%;
+    border-radius: 0px;
+    margin-top: 100px;
+  }
+  .panel-heading {
+    border-radius: 0px;
+  } 
+}
+
+.panel-heading {
+  background:rgb(52, 113, 148);
+  color:rgb(255, 255, 255);
+  height: 40px;
+  font-size: 25px;
+  font-weight:bold;
+  text-align: center;
+  padding-top: 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.panel-body {
+  font-size: 20px;
+  padding: 30px;
+}
+
+input, textarea {
+  font-family: Century Gothic, sans-serif;
+  height: 20px;
+  padding: 5px;
+  padding-left: 10px;
+  font-size: 20px;
+  color: #707070;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+::placeholder {
+  color: #a1a1a1;
+  font-family: Century Gothic, sans-serif;
+  font-size: 17px;
+}
+
+input[type=text] {
+  margin: 5px 600px 20px 5px;
+}
+
+textarea {
+  width: 98%;
+  height: 150px;
+  margin-top: 20px;
+  resize: none;
+}
+
+input[type=email] {
+  margin: 5px 600px 20px 14px;
+}
+
+input[type=checkbox] {
+  margin: 20px 0 0 0;
+  height: auto;
+}
+
+.btn {
+  font-family: Century Gothic, sans-serif;
+  font-weight: bold;
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 20px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  background: #be572e;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 5px;  
+}
+
+.btn-1 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  position:absolute;
+  width: 100%;
+  background-color: rgb(2, 59, 92);
+  color: white;
+  text-align: center;
+  height: 100px;
+  margin-top: 100px;
+}
+
+footer a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+footer p {
+  padding-top: 5px;
+}
+
+/*footer responsive*/
+@media only screen and (max-width: 1020px) {
+  footer p {
+    padding: 5px 2px;
+  }
+  footer {
+    height: auto;
+  }
+}
